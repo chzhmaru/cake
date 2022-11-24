@@ -1,0 +1,302 @@
+@charset 'utf-8';
+
+html {
+    font-family: 'Lobster';
+
+    font-size: 16px;
+    /* 일반텍스트 회색비스무리.... --> 127/127/131 #1d1d1f; */
+    background-color: white;
+    letter-spacing: -0.05em;
+
+}
+
+
+body {
+    /*가로 스크롤을 없애준다.*/
+    overflow-x: hidden;
+
+}
+
+a {   
+    text-decoration: none;
+    color : white;
+
+}
+
+/********************* 상단메뉴바 ***********************/
+.global-nav {
+    height: 44px;
+    background-color: #C9AEE6;
+    
+    /* border-top: 1px solid white; */
+    border-bottom: 3px solid white;
+  
+}
+
+.global-nav-links {
+    /* flex처리, 균일하게 배치 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+
+    /* 너비 및 마진설정 */
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 100%;
+
+}
+
+.global-nav-item
+{
+    color : white;
+    z-index: 3;
+}
+
+.global-nav-item:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+
+.local-nav {
+    height: 44px;
+    background-color: #C9AEE6;
+    z-index: 4;
+}
+
+.local-nav-links {
+    display: flex;
+    align-items: center;
+    
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 100%;
+    
+
+}
+
+.local-nav-item
+{
+    color : white;
+    
+}
+
+.local-nav-item:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+
+.local-nav-links .local-nav-item:nth-child(1)
+{
+    margin-right: auto;
+    font-weight: bold;
+    font-size : 1.5rem;
+
+}
+
+.local-nav-links .local-nav-item:not(.local-nav-links .local-nav-item:nth-child(1)) {
+    margin-left: 1em;
+}
+
+/********************* 상단메뉴바 ***********************/
+
+/********************* 스크롤 ***********************/
+.scroll-section {
+/*
+    border: 1px solid black;
+*/
+}
+
+.sticky-elem {
+    display: none;
+    position: fixed;    
+    top : 350px;
+    width: 100%;
+
+}
+
+
+.sticky-elem {
+    display: none;
+    position: fixed;     
+    top : 0px;
+    width: 100%;
+}
+
+#show-section-0 #section-0 .sticky-elem,
+#show-section-2 #section-2 .sticky-elem
+{
+    display: block;
+}
+
+#show-section-1 #section-0 .sticky-elem-canvas,
+#show-section-2 #section-0 .sticky-elem-canvas
+{
+    display: none;
+
+}
+
+/********************* 스크롤 ***********************/
+
+/********************* section0***********************/
+
+
+.video-container {
+    display: flex;
+    align-items: center;
+}
+
+.main-video {
+    background-color: #ffc0cb;
+    margin-top:10px;
+    margin-left: 3%;
+    width: 60%;
+    height: 60%;
+}
+
+.main-title-list {
+    position: absolute;
+    text-align: right;
+    margin-left: 55%;
+    margin-top: -10%;
+}
+.main-title1{
+    font-size: 9em;
+    color: pink;
+}
+
+.main-title2{
+    font-size: 6em;
+    color: lavender;
+}
+
+/********************* section1 ***********************/
+
+#section-1 {
+
+    margin-top: 0 auto;
+    background-color: pink;
+    color: white;
+}
+
+.opening {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+    font-size: 7em;
+    font-weight: bold;
+    height:4em;
+
+    
+    opacity: 0;
+
+}
+
+.opening .a{
+    position: relative;
+}
+
+.a-img {
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    left: 30%;
+}
+
+.a-text {
+    position: absolute;
+    z-index: 2;
+    top: 40%;
+    left: 5%;
+}
+
+.opening .b{
+    position: relative;
+}
+
+.b-img {
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    right: 30%;
+}
+
+.b-text {
+    position: absolute;
+    z-index: 2;
+    top: 40%;
+    left: 5%;
+}
+
+/*
+.opening .c{
+    position: relative;
+}
+
+.c-img {
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    left: 30%;
+}
+
+.c-text {
+    position: absolute;
+    z-index: 2;
+    top: 40%;
+    left: 5%;
+}
+*/
+
+
+/********************* section1 ***********************/
+
+/********************* section2 ***********************/
+#section-2{
+    background-color: lightblue;
+}
+
+
+#main-canvas {
+    height: 760px;
+    width: 1400px;
+    position: absolute;
+    left: 35%;
+}
+
+.sticky-elem-canvas {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.sticky-elem-canvas h1 {
+    position: absolute;
+    z-index: 2;
+    font-size: 5em;
+    margin-top: 5%;
+    margin-left: 3%;
+    color: lightgoldenrodyellow;
+    opacity: 0;
+}
+.sticky-elem-canvas p {
+    position: absolute;
+    z-index: 2;
+    font-size: 3.5em;
+    margin-top: 10%;
+    margin-left: 2%;
+    color: white;
+    text-align: left;
+    opacity: 0;
+}
+
+
+
+
+
+
+
+
